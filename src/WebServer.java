@@ -119,13 +119,13 @@ final class HttpRequest implements Runnable
         if(fileExists) 
         {
         	System.out.println("File Found: Will send bytes");
-        	statusLine = "HTTP/1.1 200 OK" + CRLF;
+        	statusLine = "HTTP/1.0 200 OK" + CRLF;
         	contentTypeLine = "Content-type: " + contentType(fileName) + CRLF;
         	
         } 
         else 
         {
-        	statusLine = "HTTP/1.1 404 Not Found" + CRLF;
+        	statusLine = "HTTP/1.0 404 Not Found" + CRLF;
         	contentTypeLine = "text/html" + CRLF;
         	entityBody = "<HTML>" + "<HEAD><TITLE>Not Found</TITLE></HEAD>" + "<BODY>Not Found</BODY></HTML>";
         }
