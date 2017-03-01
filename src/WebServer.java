@@ -152,8 +152,6 @@ final class HttpRequest implements Runnable
         }
         br.close();
         
-        //Send data to remote socket.
-        //dos.writeUTF("[NOTICE] Test Message1 from Server.");
         dos.close();
         socket.close();
     }
